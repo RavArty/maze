@@ -15,7 +15,7 @@ const render = Render.create({
   element: document.body,
   engine: engine,
   options: {
-    //  wireframes: false,
+    wireframes: false,
     width: width,
     height: height
   }
@@ -123,7 +123,10 @@ horizontals.forEach((row, rowIndex) => {
       5,
       {
         label: 'wall',
-        isStatic: true
+        isStatic: true,
+        render: {
+          fillStyle: 'red'
+        }
       }
     );
     World.add(world, wall);
@@ -143,7 +146,10 @@ verticals.forEach((row, rowIndex) => {
       unitLengthY,
       {
         label: 'wall',
-        isStatic: true
+        isStatic: true,
+        render: {
+          fillStyle: 'red'
+        }
       }
     );
     World.add(world, wall);
